@@ -1,0 +1,28 @@
+NAME="libsidplayfp"
+VERSION=1.8.6
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="C64 music player library"
+DESCRIPTION="libsidplayfp is a fork of LIBSIDPLAY2, a C64 music player library
+which integrates the reSID SID chip emulation into a cycle-based emulator
+environment, started with primary purpose to improve emulation of the C64 system
+and the SID chips."
+HOMEPAGE="http://sourceforge.net/projects/sidplay-residfp/"
+SRC_URI="mirror://sourceforge/sidplay-residfp/libsidplayfp-${VERSION}.tar.gz"
+
+PKG_NAMES="libsidplayfp4 libsidplayfp-devel"
+libsidplayfp4_CONTENTS="
+	usr/bin/cygsidplayfp-4.dll
+	usr/bin/cygstilview-0.dll
+	usr/share/doc/${NAME}/
+"
+libsidplayfp_devel_CONTENTS="
+	usr/include/sidplayfp/
+	usr/include/stilview/
+	usr/lib/libsidplayfp.dll.a
+	usr/lib/libstilview.dll.a
+	usr/lib/pkgconfig/libsidplayfp.pc
+	usr/lib/pkgconfig/libstilview.pc
+"
+
+MAKEOPTS+=" W32_LDFLAGS=-no-undefined"
