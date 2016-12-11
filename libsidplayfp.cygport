@@ -1,5 +1,5 @@
 NAME="libsidplayfp"
-VERSION=1.8.6
+VERSION=1.8.7
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="C64 music player library"
